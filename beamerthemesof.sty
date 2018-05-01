@@ -1,0 +1,28 @@
+\mode<presentation>
+
+%%%This was built using inspiration from the following answer on tex.stackexchange.com: https://tex.stackexchange.com/a/146682. Most credit should go to the author there.
+%%%The theme needs XeLaTeX or XeTex to run with the right font.
+%%%Change the logo in beamerinnerthemesof.sty. Logos work a lot better if you make the background transparent rather than having a white background.
+
+% Requirement
+\RequirePackage{tikz}
+\usetikzlibrary{positioning,shapes.misc}
+\usepackage{fontspec}
+\setmainfont{Linux Libertine}
+\setsansfont{Linux Biolinum}
+
+
+\DeclareOptionBeamer{style}{
+    \PassOptionsToPackage{style=#1}{beamercolorthemesof}
+}
+
+\ExecuteOptionsBeamer{style=rexie}
+\ProcessOptionsBeamer
+\usepackage{beamercolorthemesof}
+
+
+%\usepackage[sfdefault,light]{roboto}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[rounded][shadow=true]  
+
+\mode<all>

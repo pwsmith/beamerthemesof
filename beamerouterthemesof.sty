@@ -1,0 +1,29 @@
+\mode<presentation>
+
+% Frame title
+
+
+
+
+\defbeamertemplate*{frametitle}{texsx}[1][]
+{
+\vskip0.5cm%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0cm]{frametitle} 
+  \begin{tikzpicture}
+  \useasboundingbox[fill=bgd](0,0) rectangle(\the\paperwidth,1.2);
+
+  \fill[txt] (1,0.4) rectangle(\the\paperwidth,0.45);
+      \node[anchor=east, txt,font=\large] at (12.5,0.75){\insertframetitle};
+       \node[anchor= west, txt, font=\tiny] at (5,-8.2){\insertshorttitle};
+       \node[anchor= west, txt, font=\tiny] at (0,-8.2){\insertshortauthor};
+       \node[anchor= east, txt, font=\tiny] at (\paperwidth,-8.2){\insertframenumber};
+
+     
+  \end{tikzpicture}
+  
+  
+  
+  \end{beamercolorbox}
+}
+
+\mode<all>

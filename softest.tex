@@ -1,0 +1,52 @@
+\documentclass{beamer}
+
+\usepackage[style=akaroa]{beamerthemesof} %%%Color styles so far: rexie, akaroa and fang
+\usepackage{beamerinnerthemesof}
+\usepackage{beamerouterthemesof}
+\usepackage{beamercolorthemesof}
+
+\usepackage{blindtext}
+
+\title{Title}
+\author{Author}
+\institute{Institute}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\frame{
+\frametitle{Hello}
+\begin{itemize}
+\item Hello
+\end{itemize}
+\begin{block}{hello}
+Here is a regular block
+\end{block}
+\begin{exampleblock}{hello}
+Here is an example block
+\end{exampleblock}
+\begin{alertblock}{hello}
+Here is an alert block
+\end{alertblock}
+}
+
+\frame{
+\frametitle{Title}
+\blindtext
+}
+
+\frame{
+\frametitle{Title}
+\blindlist{itemize}[8]
+}
+
+\frame{
+\frametitle{Title}
+\blindlist{enumerate}[8]
+}
+
+\end{document}
+

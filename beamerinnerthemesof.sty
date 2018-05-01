@@ -1,0 +1,36 @@
+\mode<presentation>
+
+
+
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+ \fill[color=dblue] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+ \node[anchor=north] at (2,9) {\includegraphics[width=3cm]{logo.png}}; %%%FOR THE LOGO ON THE TITLE FRAME %%%Logos work a lot better if the background is transparent!!!
+ % \node[anchor=north] at (10.7,9) {\includegraphics[width=3cm]{GU-Logo-weiss.png}}; %%%FOR A SECOND LOGO ON THE TOP RIGHT OF THE TITLE FRAME
+  \ifnum\thepage>1\relax%
+   \fill[bgd,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+ 
+      \fi
+  \end{tikzpicture}
+}
+
+% Title page
+\defbeamertemplate*{title page}{texsx}[1][]
+{ 
+
+\vskip3.5cm
+    \begin{beamercolorbox}[wd=12cm,leftskip=0cm,sep=8pt,#1]{title page header}
+      \usebeamerfont{title} \flushright  {\Large \inserttitle} \\[-10pt] {\begin{tikzpicture}   \fill[color=midblue] (0,3) rectangle(10,3.05); \end{tikzpicture}} \\[5pt] {\normalsize \insertauthor} \\ {\footnotesize \insertinstitute} \\[5pt] {\small \bf \insertdate}    \par
+%
+    \end{beamercolorbox}%
+
+}
+
+% Items
+\setbeamertemplate{items}[square]
+\setbeamertemplate{sections/subsections in toc}[square]
+
+
+\mode
+<all>

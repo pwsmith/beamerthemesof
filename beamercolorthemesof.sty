@@ -1,0 +1,81 @@
+\mode<presentation>
+
+\DeclareOptionBeamer{style}{\def\beamer@sof@style{#1}}
+\ExecuteOptionsBeamer{style=rexie} % rexie will be default if nothing is given
+\ProcessOptionsBeamer
+
+
+
+\def\beamer@sof@stylefang{fang}%
+\def\beamer@sof@stylerexie{rexie}%
+\def\beamer@sof@styleakaroa{akaroa}
+    
+\ifx\beamer@sof@style\beamer@sof@stylefang%%%DARK THEME FOR DARK ROOMS
+\definecolor{dblue}{HTML}{000000}
+\definecolor{midblue}{HTML}{75c700}
+\definecolor{dgreen}{HTML}{0a5c18}
+\definecolor{bblue}{HTML}{FB8C02}
+\definecolor{bgd}{HTML}{242423}
+\definecolor{txt}{HTML}{ffffff}
+\definecolor{ppl}{HTML}{9c00f4}
+\setbeamercolor{block title}{fg=bgd,bg=orange!50!white} \setbeamercolor{block body}{fg=bgd, bg=orange!30!white}
+\setbeamercolor{block title example}{fg=bgd,bg=midblue} \setbeamercolor{block body example}{fg=bgd, bg=midblue!30!white}
+\setbeamercolor{block title alerted}{fg=bgd,bg=ppl!70!white} \setbeamercolor{block body alerted}{fg=bgd, bg=ppl!30!white}
+\else
+\fi
+
+
+ \ifx\beamer@sof@style\beamer@sof@stylerexie% dark blue title page, dark blue font, light grey background
+\definecolor{dblue}{HTML}{002C48}
+\definecolor{midblue}{HTML}{DFB402}
+\definecolor{dgreen}{HTML}{0a5c18}
+\definecolor{bblue}{HTML}{B7C7D0}
+\definecolor{bgd}{HTML}{F4F3F3}
+\definecolor{txt}{HTML}{002C48}
+\definecolor{dred}{HTML}{7B0000}
+\definecolor{ppl}{HTML}{0a7e06}
+\setbeamercolor{block title}{fg=bgd,bg=dblue} \setbeamercolor{block body}{fg=txt, bg=dblue!30!white}
+\setbeamercolor{block title example}{fg=txt,bg=midblue} \setbeamercolor{block body example}{fg=txt, bg=midblue!30!white}
+\setbeamercolor{block title alerted}{fg=txt,bg=ppl!70!white} \setbeamercolor{block body alerted}{fg=txt, bg=ppl!30!white}
+\else
+\fi
+
+
+\ifx\beamer@sof@style\beamer@sof@styleakaroa%Black title page, blackish text with light grey background
+\definecolor{dblue}{HTML}{1c1b1b}
+\definecolor{midblue}{HTML}{DFB402}
+\definecolor{dgreen}{HTML}{0a5c18}
+\definecolor{bblue}{HTML}{CFD0D1}
+\definecolor{bgd}{HTML}{F4F3F3}
+\definecolor{dred}{HTML}{7B0000}
+\definecolor{txt}{HTML}{1c1b1b}
+\definecolor{ppl}{HTML}{0a7e06}
+\setbeamercolor{block title alerted}{fg=bgd,bg=dred} \setbeamercolor{block body alerted}{fg=txt, bg=dred!30!white}
+\setbeamercolor{block title example}{fg=txt,bg=midblue} \setbeamercolor{block body example}{fg=txt, bg=midblue!30!white}
+\setbeamercolor{block title}{fg=txt,bg=ppl!70!white} \setbeamercolor{block body}{fg=txt, bg=ppl!30!white}
+\fi
+
+
+
+% Settings
+\setbeamercolor*{title page header}{fg=bblue}
+\setbeamercolor*{author}{fg=bblue}
+\setbeamercolor*{date}{fg=bblue}
+\setbeamercolor*{item}{fg=txt}
+\setbeamercolor*{institute}{fg=bblue}
+\setbeamercolor*{alerted text}{fg=blue}
+\setbeamercolor*{example text}{fg=txt}
+\setbeamercolor*{enumerate item}{fg=midblue}  
+\setbeamercolor*{itemize item}{fg=txt}  
+\setbeamercolor*{normal text}{fg=txt}
+\setbeamertemplate{itemize items}{\normalsize$\blacktriangleright$} 
+\setbeamertemplate{enumerate item}{%
+  \usebeamercolor[bg]{item projected}%
+  \raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+
+
+
+
+\mode
+<all>
